@@ -15,11 +15,11 @@ const Hero: React.FC = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
           </span>
-          Origo 2.0: The Quest Continues
+          Origo 2.0: The Quest Begins
         </div>
 
-        {/* Illuminated Headline */}
-        <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-[1.05] max-w-5xl mx-auto relative">
+        {/* Illuminated Headline - Slightly smaller font size */}
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-[1.05] max-w-5xl mx-auto relative">
           <span 
             className="block text-white drop-shadow-[0_-2px_15px_rgba(255,255,255,0.4)]"
             style={{ textShadow: '0 -2px 10px rgba(255,255,255,0.3)' }}

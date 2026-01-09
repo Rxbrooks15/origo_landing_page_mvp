@@ -57,7 +57,7 @@ const OrigamiSection: React.FC = () => {
               <TrendingUp className="text-fuchsia-400 w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold mb-3">Value Appreciation</h3>
-            <p className="text-gray-400">The rarer the asset the higher its value in the digital ecosystem.</p>
+            <p className="text-gray-400">The rarer the asset, the higher its value in the digital ecosystem.</p>
           </div>
           
           {/* Locked Feature: Crumble & Trade */}

@@ -31,14 +31,14 @@ const App: React.FC = () => {
                     < Zap className="text-blue-400 w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Solar Charging</h3>
-                  <p className="text-gray-400">Exposure to sunlight fuels your DOAs.</p>
+                  <p className="text-gray-400">Exposure to sunlight and outdoor activity fuels your DOAs.</p>
                 </div>
                 <div className="text-center group">
                   <div className="w-16 h-16 bg-fuchsia-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <TrendingUp className="text-fuchsia-400 w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Value Appreciation</h3>
-                  <p className="text-gray-400">The rarer the asset the higher its value in the digital ecosystem.</p>
+                  <p className="text-gray-400">The rarer the asset, the higher its value in the digital ecosystem.</p>
                 </div>
                 
                 {/* Locked Feature: Crumble & Trade */}
