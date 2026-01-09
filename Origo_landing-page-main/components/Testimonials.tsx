@@ -30,7 +30,7 @@ const reviews = [
   {
     stars: 5,
     title: "Highly Recommend",
-    body: "I have been using SunQuest for one month to map sun position for maximum solar irradiance on my PV panels.",
+    body: "I have been using Origo for one month to map sun position for maximum solar irradiance on my PV panels.",
     author: "Solar Energy Specialist"
   },
   {
@@ -49,7 +49,7 @@ const Testimonials: React.FC = () => {
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Happy Users</h2>
-            <p className="text-gray-400">Join 100,000+ professionals and sun seekers worldwide.</p>
+            <p className="text-gray-400">Join 100,000+ professionals and seekers worldwide.</p>
           </div>
           <div className="flex items-center gap-8 bg-white/5 p-6 rounded-3xl border border-white/10">
             <div className="text-center">
@@ -84,10 +84,10 @@ const Testimonials: React.FC = () => {
         <div className="mt-20 text-center">
           <p className="text-gray-500 mb-8 uppercase tracking-[0.3em] text-sm">Featured On</p>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale">
-            <img src="https://picsum.photos/seed/press1/100/40" alt="Press Logo" />
-            <img src="https://picsum.photos/seed/press2/100/40" alt="Press Logo" />
-            <img src="https://picsum.photos/seed/press3/100/40" alt="Press Logo" />
-            <img src="https://picsum.photos/seed/press4/100/40" alt="Press Logo" />
+            <div className="text-gray-600 font-bold text-xl tracking-tighter">TECH CRUNCH</div>
+            <div className="text-gray-600 font-bold text-xl tracking-tighter">WIRED</div>
+            <div className="text-gray-600 font-bold text-xl tracking-tighter">THE VERGE</div>
+            <div className="text-gray-600 font-bold text-xl tracking-tighter">FORBES</div>
           </div>
         </div>
       </div>

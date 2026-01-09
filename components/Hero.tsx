@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Illuminated Headline - Slightly smaller font size */}
-        <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-[1.05] max-w-5xl mx-auto relative">
+        <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-8 leading-[1.1] max-w-4xl mx-auto relative">
           <span 
             className="block text-white drop-shadow-[0_-2px_15px_rgba(255,255,255,0.4)]"
             style={{ textShadow: '0 -2px 10px rgba(255,255,255,0.3)' }}
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
           <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-white/10 blur-3xl rounded-full pointer-events-none" />
         </h1>
 
-        <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+        <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
           Explore the outdoors, get sunlight, and develop your digital origami assets (DOAs)
         </p>
 
