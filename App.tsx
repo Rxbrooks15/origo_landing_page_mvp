@@ -1,13 +1,16 @@
+
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PhoneMockup from './components/PhoneMockup';
 import Footer from './components/Footer';
-import { Zap, TrendingUp, Store } from 'lucide-react';
+import CursorGlow from './components/CursorGlow';
+import { Zap, TrendingUp, Store, Lock } from 'lucide-react';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#0f0a1e]">
+      <CursorGlow />
       <Navbar />
       <main className="flex-grow pt-20">
         <div className="animate-in fade-in duration-700">
@@ -23,26 +26,45 @@ const App: React.FC = () => {
           <section className="py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     < Zap className="text-blue-400 w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Solar Charging</h3>
-                  <p className="text-gray-400">Exposure to real sunlight fuels your digital origami. Origo uses smart sensors to track light intensity and quality.</p>
+                  <p className="text-gray-400">Exposure to sunlight fuels your DOAs.</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-fuchsia-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-fuchsia-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <TrendingUp className="text-fuchsia-400 w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Value Appreciation</h3>
-                  <p className="text-gray-400">The rarer the crane and the more solar energy it absorbs, the higher its value in the Origo ecosystem.</p>
+                  <p className="text-gray-400">The rarer the asset the higher its value in the digital ecosystem.</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-slate-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Store className="text-slate-400 w-8 h-8" />
+                
+                {/* Locked Feature: Crumble & Trade */}
+                <div className="text-center relative group">
+                  <div className="opacity-20 grayscale pointer-events-none transition-all duration-700 group-hover:opacity-10">
+                    <div className="w-16 h-16 bg-slate-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Store className="text-slate-500 w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3">Crumble & Trade</h3>
+                    <p className="text-gray-500 italic">Crumble your cranes for premium assets or trade them in our secure decentralized gallery with other seekers.</p>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Crumble & Trade</h3>
-                  <p className="text-gray-400">Crumble your cranes for premium assets or trade them in our secure decentralized gallery with other seekers.</p>
+                  
+                  {/* Lock Overlay */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                    <div className="bg-[#1a1625]/60 backdrop-blur-md border border-white/5 rounded-[2rem] px-8 py-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col items-center gap-4 transform group-hover:scale-105 transition-all duration-500">
+                      <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 shadow-inner">
+                        <Lock size={24} strokeWidth={2.5} />
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-[11px] font-black uppercase tracking-[0.4em] text-white/50">Feature Locked</div>
+                        <div className="bg-gradient-to-r from-blue-500/20 to-fuchsia-500/20 border border-white/5 px-4 py-1.5 rounded-full text-[10px] font-bold text-white/80 tracking-widest uppercase">
+                          Coming Soon
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

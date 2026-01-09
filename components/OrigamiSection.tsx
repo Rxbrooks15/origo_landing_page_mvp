@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Bird, Zap, Clock, TrendingUp, Store, User, Sun, Sparkles } from 'lucide-react';
+import { Bird, Zap, Clock, TrendingUp, Store, User, Sun, Sparkles, Lock } from 'lucide-react';
 
 const OrigamiSection: React.FC = () => {
   return (
@@ -45,26 +45,40 @@ const OrigamiSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div className="text-center group">
+            <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <Sparkles className="text-blue-400 w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold mb-3">Digital Evolution</h3>
             <p className="text-gray-400">Your cranes evolve as you reach new milestones. Each step outdoors adds complexity and unique visual traits to your assets.</p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-fuchsia-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div className="text-center group">
+            <div className="w-16 h-16 bg-fuchsia-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <TrendingUp className="text-fuchsia-400 w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold mb-3">Value Appreciation</h3>
-            <p className="text-gray-400">The rarer the crane and the more energy it collects from your journeys, the higher its value in the Origo ecosystem.</p>
+            <p className="text-gray-400">The rarer the asset the higher its value in the digital ecosystem.</p>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-slate-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Store className="text-slate-400 w-8 h-8" />
+          
+          {/* Locked Feature: Crumble & Trade */}
+          <div className="text-center relative group">
+            <div className="opacity-20 grayscale pointer-events-none transition-all duration-700">
+              <div className="w-16 h-16 bg-slate-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Store className="text-slate-500 w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-white">Crumble & Trade</h3>
+              <p className="text-gray-500 italic">Crumble your cranes for premium assets or trade them in our secure decentralized gallery with other seekers.</p>
             </div>
-            <h3 className="text-xl font-bold mb-3">Crumble & Trade</h3>
-            <p className="text-gray-400">Crumble your cranes for premium assets or trade them in our secure decentralized gallery with other seekers.</p>
+            
+            {/* Lock Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+              <div className="bg-[#0f0a1e]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 shadow-xl transform group-hover:scale-105 transition-transform duration-500">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-500">
+                  <Lock size={20} />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">Locked</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
