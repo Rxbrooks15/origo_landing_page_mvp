@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PhoneMockup from './components/PhoneMockup';
@@ -11,6 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#0f0a1e]">
       <CursorGlow />
+      <Analytics />
       <Navbar />
       <main className="flex-grow pt-20">
         <div className="animate-in fade-in duration-700">
