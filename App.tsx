@@ -5,14 +5,36 @@ import Hero from './components/Hero';
 import PhoneMockup from './components/PhoneMockup';
 import Footer from './components/Footer';
 import CursorGlow from './components/CursorGlow';
+import Antigravity from './components/Antigravity';
+import WorldMap from './components/WorldMap';
 import { Zap, TrendingUp, Store, Lock } from 'lucide-react';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#0f0a1e]">
       <CursorGlow />
+      
+      {/* Parallax World Map Outline */}
+      <WorldMap />
+      
+      {/* Antigravity Background for Hero Section */}
+      <div className="fixed top-0 left-0 w-full h-screen z-0 pointer-events-none opacity-40">
+        <Antigravity
+          count={300}
+          magnetRadius={15}
+          ringRadius={12}
+          waveSpeed={0.4}
+          waveAmplitude={1}
+          particleSize={1.5}
+          lerpSpeed={0.2}
+          color={'#FFFFFF'}
+          autoAnimate={true}
+          particleVariance={1}
+        />
+      </div>
+
       <Navbar />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-20 relative z-10">
         <div className="animate-in fade-in duration-700">
           <Hero />
           
