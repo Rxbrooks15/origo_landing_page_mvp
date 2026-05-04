@@ -97,6 +97,14 @@ const Hero: React.FC = () => {
             />
           </a>
         </div>
+
+        {/* Origo Description */}
+        <div className="max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light tracking-wide italic">
+            Origo is a social media platform/ digital repository in the B2C origami market designed to gamify the digital collection experience. By integrating origami characters, challenges, rewards, and progress tracking, the app incentivizes users to fold and collect digital origami assets of varying <span className="text-blue-400 font-bold uppercase tracking-widest text-[10px]">gami</span> (origami value) to cultivate the ancient art of paper folding.
+          </p>
+          <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mt-8" />
+        </div>
       </div>
     </section>
   );

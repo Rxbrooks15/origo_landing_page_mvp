@@ -193,7 +193,7 @@ const ConnectionArcs = () => {
           .addVectors(start, end)
           .multiplyScalar(0.5)
           .normalize()
-          .multiplyScalar(1.625);
+          .multiplyScalar(1.65);
         const curve = new THREE.QuadraticBezierCurve3(start, midPoint, end);
         connections.push(
           <Line

@@ -118,6 +118,25 @@ const GlobePage: React.FC<GlobePageProps> = ({ onBack }) => {
         </div>
       </div>
 
+      {/* Earth I Label */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-10 z-30 pointer-events-none select-none animate-in fade-in slide-in-from-left-8 duration-1000 delay-300">
+        <div className="flex items-center gap-8">
+          <div className="h-[250px] w-px bg-gradient-to-b from-transparent via-blue-500/20 to-transparent" />
+          <div className="flex flex-col">
+            <h2 className="text-4xl md:text-6xl font-black text-white/5 uppercase tracking-tighter leading-none">
+              Earth <span className="text-blue-500/10">I</span>
+            </h2>
+            <div className="flex items-center gap-4 mt-4">
+              <div className="w-12 h-px bg-blue-500/20" />
+              <div className="flex flex-col">
+                <span className="text-[10px] text-blue-500/40 font-black uppercase tracking-[0.5em] mb-1">Primary Dimension</span>
+                <span className="text-[8px] text-white/20 font-mono tracking-[0.3em] uppercase">Archive Sector 01-A</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 3D Canvas */}
       <div className="flex-grow w-full relative z-10">
         <Suspense fallback={

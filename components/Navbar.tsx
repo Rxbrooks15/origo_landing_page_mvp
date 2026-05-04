@@ -62,6 +62,15 @@ const Navbar: React.FC<NavbarProps> = ({ onStoriesClick, onCollisionClick, onGlo
 
             <div className="hidden md:flex items-center gap-8">
               <div className="flex items-center space-x-8">
+                {/* 3D Globe View Link */}
+                <button
+                  onClick={onGlobeClick}
+                  className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <Sparkles size={14} className="text-blue-400" />
+                  3D Globe View
+                </button>
+
                 {/* The Creased Cosmos Link */}
                 <button
                   onClick={onStoriesClick}
@@ -78,16 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({ onStoriesClick, onCollisionClick, onGlo
                     activeMenu === 'cosmos' ? 'text-fuchsia-400' : 'text-gray-400 hover:text-white'
                   }`}
                 >
-                  Discovery {activeMenu === 'cosmos' ? <X size={12} /> : <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-500 animate-pulse" />}
-                </button>
-
-                {/* 3D Globe View Link */}
-                <button
-                  onClick={onGlobeClick}
-                  className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <Sparkles size={14} className="text-blue-400" />
-                  3D Globe View
+                   Discovery {activeMenu === 'cosmos' ? <X size={12} /> : <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-500 animate-pulse" />}
                 </button>
               </div>
               <a 
@@ -125,7 +125,7 @@ const Navbar: React.FC<NavbarProps> = ({ onStoriesClick, onCollisionClick, onGlo
                    <div className="relative group w-full max-w-sm">
                       <div className="absolute -inset-1 bg-gradient-to-tr from-blue-500/20 to-fuchsia-500/20 rounded-[3.5rem] blur-xl opacity-50 group-hover:opacity-100 transition-opacity" />
                       <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/20 bg-[#1e293b]/40 shadow-2xl">
-                         <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=1200" alt="Cosmos" className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110" />
+                         <img src="/collision_catastrophe.png" alt="Cosmos" className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-110" />
                          <div className="absolute inset-0 bg-gradient-to-t from-[#0f0a1e] via-transparent to-fuchsia-500/10" />
                          <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-20 h-20 text-blue-400 animate-bounce">
@@ -191,11 +191,14 @@ const Navbar: React.FC<NavbarProps> = ({ onStoriesClick, onCollisionClick, onGlo
         {isOpen && (
           <div className="md:hidden bg-[#0f0a1e] border-b border-white/10 py-8 px-6 space-y-6 animate-in slide-in-from-top duration-300">
             <div className="flex flex-col space-y-4">
-              <button onClick={() => toggleMenu('cosmos')} className="text-[12px] font-black uppercase tracking-[0.4em] text-fuchsia-400 flex items-center justify-between py-2 border-b border-white/5">
-                Eternal Archive <BookOpen size={16} />
-              </button>
               <button onClick={() => { onGlobeClick(); setIsOpen(false); }} className="text-[12px] font-black uppercase tracking-[0.4em] text-blue-400 flex items-center justify-between py-2 border-b border-white/5">
                 3D Globe View <Sparkles size={16} />
+              </button>
+              <button onClick={() => { onStoriesClick(); setIsOpen(false); }} className="text-[12px] font-black uppercase tracking-[0.4em] text-fuchsia-400 flex items-center justify-between py-2 border-b border-white/5">
+                The Creased Cosmos <BookOpen size={16} />
+              </button>
+              <button onClick={() => toggleMenu('cosmos')} className="text-[12px] font-black uppercase tracking-[0.4em] text-fuchsia-400 flex items-center justify-between py-2 border-b border-white/5">
+                Discovery <BookOpen size={16} />
               </button>
             </div>
             <a href="https://apps.apple.com/us/iphone/today" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-fuchsia-600 text-white px-6 py-4 rounded-2xl font-black uppercase tracking-widest text-center text-sm">

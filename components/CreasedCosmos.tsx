@@ -29,9 +29,9 @@ const CreasedCosmos: React.FC = () => {
             
             {/* Main Visual: Representation of the golden stairs to portal */}
             <div className="absolute inset-0 bg-[#0f0a1e]">
-               {/* Surreal Portal Image Placeholder */}
+               {/* Surreal Portal Image - Collision of Catastrophe */}
                <img 
-                 src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=1200" 
+                 src="/collision_catastrophe.png" 
                  alt="The Folded Path" 
                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60"
                />
