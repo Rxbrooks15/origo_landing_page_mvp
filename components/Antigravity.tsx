@@ -142,14 +142,22 @@ const AntigravityInner = ({
     mesh.instanceMatrix.needsUpdate = true;
   });
 
+  // Use local aliases cast to any to bypass JSX intrinsic elements check for Three.js elements
+  const InstancedMesh = 'instancedMesh' as any;
+  const CapsuleGeometry = 'capsuleGeometry' as any;
+  const SphereGeometry = 'sphereGeometry' as any;
+  const BoxGeometry = 'boxGeometry' as any;
+  const TetrahedronGeometry = 'tetrahedronGeometry' as any;
+  const MeshBasicMaterial = 'meshBasicMaterial' as any;
+
   return (
-    <instancedMesh ref={meshRef} args={[null as any, null as any, count]}>
-      {particleShape === 'capsule' && <capsuleGeometry args={[0.1, 0.4, 4, 8]} />}
-      {particleShape === 'sphere' && <sphereGeometry args={[0.2, 16, 16]} />}
-      {particleShape === 'box' && <boxGeometry args={[0.3, 0.3, 0.3]} />}
-      {particleShape === 'tetrahedron' && <tetrahedronGeometry args={[0.3]} />}
-      <meshBasicMaterial color={color} transparent opacity={0.6} />
-    </instancedMesh>
+    <InstancedMesh ref={meshRef} args={[null as any, null as any, count]}>
+      {particleShape === 'capsule' && <CapsuleGeometry args={[0.1, 0.4, 4, 8]} />}
+      {particleShape === 'sphere' && <SphereGeometry args={[0.2, 16, 16]} />}
+      {particleShape === 'box' && <BoxGeometry args={[0.3, 0.3, 0.3]} />}
+      {particleShape === 'tetrahedron' && <TetrahedronGeometry args={[0.3]} />}
+      <MeshBasicMaterial color={color} transparent opacity={0.6} />
+    </InstancedMesh>
   );
 };
 

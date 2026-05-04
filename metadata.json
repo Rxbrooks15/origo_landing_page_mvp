@@ -1,5 +1,6 @@
 {
-  "name": "Origo",
+  "name": "Origo Landing Page",
   "description": "Origo | Origami on the GO. Collect solar-powered digital assets by exploring the outdoors.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }

@@ -1,21 +1,53 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
+  const [downloads, setDownloads] = useState(6055);
+  const [models, setModels] = useState(10202);
+  const [users, setUsers] = useState(397);
+
+  useEffect(() => {
+    const dInterval = setInterval(() => setDownloads(d => d + 1), 10000);
+    const mInterval = setInterval(() => setModels(m => m + 1), 5000);
+    const uInterval = setInterval(() => setUsers(u => u + 1), 7000);
+    
+    return () => {
+      clearInterval(dInterval);
+      clearInterval(mInterval);
+      clearInterval(uInterval);
+    };
+  }, []);
+
   return (
-    <section className="relative pt-40 pb-24 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-16 pb-24 overflow-hidden min-h-[70vh] flex items-start">
       {/* Dynamic Light Beam from top */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[400px] bg-gradient-to-b from-white via-white/20 to-transparent z-10 opacity-30 blur-[1px]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[500px] bg-[conic-gradient(from_180deg_at_50%_0%,rgba(255,255,255,0.15)_0deg,transparent_20deg,transparent_340deg,rgba(255,255,255,0.15)_360deg)] blur-3xl z-10 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full z-0 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-semibold mb-10 tracking-wider uppercase">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-blue-400 text-xs font-semibold mb-6 tracking-wider uppercase">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
           </span>
           Origo 2.0: The Quest Begins
+        </div>
+
+        {/* Stats Section at the Top */}
+        <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-10 animate-in fade-in zoom-in-95 duration-700">
+          <div className="flex flex-col">
+            <span className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em] mb-1">Active Downloads</span>
+            <span className="text-xl md:text-2xl font-mono font-black text-white tabular-nums">{downloads.toLocaleString()}</span>
+          </div>
+          <div className="flex flex-col border-x border-white/10">
+            <span className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em] mb-1">Models Created</span>
+            <span className="text-xl md:text-2xl font-mono font-black text-white tabular-nums">{models.toLocaleString()}</span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em] mb-1">Active Users</span>
+            <span className="text-xl md:text-2xl font-mono font-black text-white tabular-nums">{users.toLocaleString()}</span>
+          </div>
         </div>
 
         {/* Illuminated Headline - Slightly smaller font size */}
@@ -39,7 +71,7 @@ const Hero: React.FC = () => {
           Explore the outdoors, get sunlight, and develop your digital origami assets (DOAs)
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
           <a 
             href="https://apps.apple.com/us/iphone/today" 
             target="_blank" 
